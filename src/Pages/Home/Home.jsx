@@ -1,7 +1,11 @@
 import React from "react";
 import ReviewCard from "../../Components/ReviewCard/ReviewCard";
+import useReview from "../../hooks/useReview";
 
 const Home = () => {
+  const [reviews, setReviews] = useReview();
+  const threeReviews = reviews.slice(0, 3);
+
   return (
     <main>
       <div className="container mx-auto d-flex align-items-center justify-content-between my-4">
@@ -27,9 +31,9 @@ const Home = () => {
       <section className="container mx-auto">
         <h2 className="text-center">Customer Reviews</h2>
         <div className="row row-cols-1 row-cols-md-3 g-4 my-3">
-          <ReviewCard />
-          <ReviewCard />
-          <ReviewCard />
+          {threeReviews.map((review) => (
+            <ReviewCard key={review.id} review={review} />
+          ))}
         </div>
       </section>
     </main>
