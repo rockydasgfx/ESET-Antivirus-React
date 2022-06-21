@@ -6,7 +6,7 @@ const Header = () => {
       <nav className="navbar navbar-expand-lg bg-light">
         <div className="container">
           <NavLink className="navbar-brand fw-bold text-secondary" to="/">
-            ESST Antivirus
+            ESET Antivirus
           </NavLink>
           <button
             className="navbar-toggler"
