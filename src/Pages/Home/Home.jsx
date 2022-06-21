@@ -1,4 +1,5 @@
 import React from "react";
+import ReviewCard from "../../Components/ReviewCard/ReviewCard";
 
 const Home = () => {
   return (
@@ -23,6 +24,14 @@ const Home = () => {
           alt=""
         />
       </div>
+      <section className="container mx-auto">
+        <h2 className="text-center">Customer Reviews</h2>
+        <div className="row row-cols-1 row-cols-md-3 g-4 my-3">
+          <ReviewCard />
+          <ReviewCard />
+          <ReviewCard />
+        </div>
+      </section>
     </main>
   );
 };
