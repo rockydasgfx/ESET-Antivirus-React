@@ -7,7 +7,7 @@ const Reviews = () => {
   return (
     <div className="container mx-auto">
       <h2 className="text-center">Our Buyers Say</h2>
-      <div className="row row-cols-1 row-cols-md-3 g-4 my-3">
+      <div className="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-4 my-3">
         {reviews.map((review) => (
           <ReviewCard key={review.id} review={review} />
         ))}

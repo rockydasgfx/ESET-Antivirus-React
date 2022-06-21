@@ -9,7 +9,7 @@ const Home = () => {
 
   return (
     <main>
-      <div className="container mx-auto d-flex align-items-center justify-content-between my-4">
+      <div className="container mx-auto d-flex flex-column flex-lg-row align-items-center justify-content-lg-between my-4">
         <div>
           <h1 className="fw-bold">
             ESET INTERNET SECURITY <br />
@@ -31,7 +31,7 @@ const Home = () => {
       </div>
       <section className="container mx-auto">
         <h2 className="text-center">Customer Reviews</h2>
-        <div className="row row-cols-1 row-cols-md-3 g-4 my-3">
+        <div className="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-4 my-3">
           {threeReviews.map((review) => (
             <ReviewCard key={review.id} review={review} />
           ))}

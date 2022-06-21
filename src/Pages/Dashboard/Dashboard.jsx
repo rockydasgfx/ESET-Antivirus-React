@@ -52,7 +52,10 @@ const data = [
 
 const Dashboard = () => {
   return (
-    <div className="container mx-auto d-flex justify-content-between">
+    <div
+      className="container mx-auto d-flex flex-column flex-lg-row
+      justify-content-md-between"
+    >
       <div className="d-flex flex-column align-items-center">
         <h4 className="">Month Wise Sell</h4>
         <LineChart
