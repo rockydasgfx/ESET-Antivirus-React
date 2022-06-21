@@ -1,4 +1,15 @@
 import React from "react";
+import {
+  LineChart,
+  Line,
+  BarChart,
+  Bar,
+  XAxis,
+  YAxis,
+  CartesianGrid,
+  Tooltip,
+  Legend,
+} from "recharts";
 
 const data = [
   {
@@ -41,8 +52,56 @@ const data = [
 
 const Dashboard = () => {
   return (
-    <div>
-      <h2>this is Dashboard</h2>
+    <div className="container mx-auto d-flex justify-content-between">
+      <div className="d-flex flex-column align-items-center">
+        <h4 className="">Month Wise Sell</h4>
+        <LineChart
+          width={400}
+          height={300}
+          data={data}
+          margin={{
+            top: 5,
+            right: 30,
+            left: 20,
+            bottom: 5,
+          }}
+        >
+          <CartesianGrid strokeDasharray="3 3" />
+          <XAxis dataKey="month" />
+          <YAxis />
+          <Tooltip />
+          <Legend />
+          <Line
+            type="monotone"
+            dataKey="sell"
+            stroke="#8884d8"
+            activeDot={{ r: 8 }}
+          />
+        </LineChart>
+      </div>
+
+      <div className="d-flex flex-column align-items-center">
+        <h4 className="">Month Wise Sell</h4>
+        <BarChart
+          width={400}
+          height={300}
+          data={data}
+          margin={{
+            top: 20,
+            right: 30,
+            left: 20,
+            bottom: 5,
+          }}
+        >
+          <CartesianGrid strokeDasharray="3 3" />
+          <XAxis dataKey="month" />
+          <YAxis />
+          <Tooltip />
+          <Legend />
+          <Bar dataKey="investment" stackId="a" fill="#8884d8" />
+          <Bar dataKey="revenue" stackId="a" fill="#82ca9d" />
+        </BarChart>
+      </div>
     </div>
   );
 };
