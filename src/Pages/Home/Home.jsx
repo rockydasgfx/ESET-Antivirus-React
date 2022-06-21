@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import ReviewCard from "../../Components/ReviewCard/ReviewCard";
 import useReview from "../../hooks/useReview";
 
@@ -34,6 +35,13 @@ const Home = () => {
           {threeReviews.map((review) => (
             <ReviewCard key={review.id} review={review} />
           ))}
+        </div>
+        <div className="text-center">
+          <Link to="/reviews">
+            <button type="button" className="btn btn-primary text-center">
+              See All Reviews
+            </button>
+          </Link>
         </div>
       </section>
     </main>
